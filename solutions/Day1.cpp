@@ -10,7 +10,6 @@ namespace aoc
 	{
 		int Part1(std::vector<int> data)
 		{
-			std::cout << data.size() << "\n";
 			int previous{};
 			int current{};
 			int increasedMeasurements{};
