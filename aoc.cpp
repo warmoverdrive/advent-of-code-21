@@ -5,6 +5,7 @@
 
 #include "utils/Input-V4.h"
 #include "solutions/Day1.cpp"
+#include "solutions/Day2.cpp"
 
 const std::string dir{"input/"};
 
@@ -33,7 +34,16 @@ void Day1(std::vector<int> data)
 	print(__func__, result1, elapsed1, result2, elapsed2);
 }
 
+void Day2(std::vector<std::string> data)
+{
+	auto [result1, elapsed1] = SolutionRunner(aoc::Day2::Part1, data);
+	auto [result2, elapsed2] = SolutionRunner(aoc::Day2::Part2, data);
+
+	print(__func__, result1, elapsed1, result2, elapsed2);
+}
+
 int main(int argc, char **argv)
 {
 	Day1(Input::GetNumberData<int>(dir + "01Input.txt", '\n'));
+	Day2(Input::GetData<std::string>(dir + "02Input.txt", '\n'));
 }
