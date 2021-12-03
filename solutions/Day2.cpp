@@ -14,7 +14,7 @@ namespace aoc
 		{
 			uint64_t horizontalPos{}, depth{};
 
-			for (auto line : data)
+			for (auto &line : data)
 			{
 				if (line[0] == 'f') // forward
 					horizontalPos += std::stoi(line.substr(forward.length()));
@@ -36,7 +36,7 @@ namespace aoc
 		{
 			uint64_t horizontalPos{}, depth{}, aim{};
 
-			for (auto line : data)
+			for (auto &line : data)
 			{
 				if (line[0] == 'f')
 				{
@@ -50,7 +50,7 @@ namespace aoc
 					aim -= std::stoi(line.substr(up.length()));
 				else
 				{
-					std::cout << "Day2.A - ERROR - Data invalid\n\n";
+					std::cout << "Day2.B - ERROR - Data invalid\n\n";
 					return 0;
 				}
 			}
