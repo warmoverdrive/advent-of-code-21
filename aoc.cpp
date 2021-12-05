@@ -7,6 +7,8 @@
 #include "solutions/Day1.cpp"
 #include "solutions/Day2.cpp"
 #include "solutions/Day3.cpp"
+#include "solutions/Day4.cpp"
+#include "solutions/Day5.cpp"
 
 const std::string dir{"input/"};
 
@@ -51,9 +53,27 @@ void Day3(std::vector<std::string> data)
 	print(__func__, result1, elapsed1, result2, elapsed2);
 }
 
+void Day4(std::vector<std::string> data)
+{
+	auto [result1, elapsed1] = SolutionRunner(aoc::Day4::Part1, data);
+	auto [result2, elapsed2] = SolutionRunner(aoc::Day4::Part2, data);
+
+	print(__func__, result1, elapsed1, result2, elapsed2);
+}
+
+void Day5(std::vector<std::string> data)
+{
+	auto [result1, elapsed1] = SolutionRunner(aoc::Day5::Part1, data);
+	auto [result2, elapsed2] = SolutionRunner(aoc::Day5::Part2, data);
+
+	print(__func__, result1, elapsed1, result2, elapsed2);
+}
+
 int main(int argc, char **argv)
 {
 	Day1(Input::GetNumberData<int>(dir + "01Input.txt", '\n'));
 	Day2(Input::GetData<std::string>(dir + "02Input.txt", '\n'));
 	Day3(Input::GetData<std::string>(dir + "03Input.txt", '\n'));
+	Day4(Input::GetData<std::string>(dir + "03Input.txt", '\n'));
+	Day5(Input::GetData<std::string>(dir + "05Test.txt", '\n'));
 }
