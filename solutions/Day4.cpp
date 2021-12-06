@@ -26,7 +26,7 @@ namespace aoc
 			std::string temp{};
 
 			sstream << data[0];
-			std::cout << data[0] << '\n';
+
 			do
 			{
 				std::getline(sstream, temp, ',');
@@ -40,7 +40,6 @@ namespace aoc
 			{
 				if (data[ind].size() == 0)
 				{
-					std::cout << "EMPTY\n";
 					row = 0;
 					boards.emplace_back(Board());
 					board++;
@@ -63,23 +62,6 @@ namespace aoc
 			std::queue<int> numbers{};
 
 			ParseData(data, boards, numbers);
-
-			while (numbers.size() > 0)
-			{
-				std::cout << numbers.front() << " ";
-				numbers.pop();
-			}
-			std::cout << "\n\n";
-			for (auto board : boards)
-			{
-				for (auto row : board.board)
-				{
-					for (auto col : row)
-						std::cout << col.first << " ";
-					std::cout << '\n';
-				}
-				std::cout << '\n';
-			}
 
 			return 0;
 		}
