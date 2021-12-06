@@ -75,5 +75,5 @@ int main(int argc, char **argv)
 	Day2(Input::GetData<std::string>(dir + "02Input.txt", '\n'));
 	Day3(Input::GetData<std::string>(dir + "03Input.txt", '\n'));
 	Day4(Input::GetData<std::string>(dir + "03Input.txt", '\n'));
-	Day5(Input::GetData<std::string>(dir + "05Test.txt", '\n'));
+	Day5(Input::GetData<std::string>(dir + "05Input.txt", '\n'));
 }

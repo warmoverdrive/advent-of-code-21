@@ -82,7 +82,7 @@ namespace aoc
 			std::vector<Line> lines{};
 			ParseLineData(data, lines);
 
-			std::vector<std::vector<int>> graph(10, std::vector<int>(10, 0)); // create a 1000:1000 diagram
+			std::vector<std::vector<int>> graph(1000, std::vector<int>(1000, 0)); // create a 1000:1000 diagram
 
 			for (auto line : lines)
 			{
@@ -113,7 +113,7 @@ namespace aoc
 						 xDeltaPositive ? x <= line.x2 : x >= line.x2;
 						 xDeltaPositive ? x++ : x--, yDetlaPositive ? y++ : y--)
 					{
-						graph[x][y]++;
+						graph[y][x]++;
 					}
 				}
 			}
@@ -121,18 +121,9 @@ namespace aoc
 			int tally{};
 
 			for (auto row : graph)
-			{
 				for (auto space : row)
-				{
 					if (space > 1)
 						tally++;
-					if (space == 0)
-						std::cout << ". ";
-					else
-						std::cout << space << " ";
-				}
-				std::cout << '\n';
-			}
 
 			return tally;
 		}
