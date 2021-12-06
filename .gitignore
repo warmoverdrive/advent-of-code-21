@@ -1,4 +1,4 @@
 *.exe
-settings.json
 c_cpp_properties.json
 *.code-workspace
+.vscode/settings.json
