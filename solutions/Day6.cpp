@@ -6,15 +6,15 @@
 #include <string>
 #include <algorithm>
 
-const int newFishTimer = 8;
-const int fishRespawnTimer = 6;
-const int daysToCheckA = 80;
-const int daysToCheckB = 256;
-
 namespace aoc
 {
 	namespace Day6
 	{
+		const int newFishTimer = 8;
+		const int fishRespawnTimer = 6;
+		const int daysToCheckA = 80;
+		const int daysToCheckB = 256;
+
 		uint64_t Part1(std::vector<int> &data)
 		{
 			for (auto day = 0; day < daysToCheckA; day++)
