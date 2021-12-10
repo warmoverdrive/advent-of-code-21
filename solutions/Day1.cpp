@@ -8,7 +8,7 @@ namespace aoc
 {
 	namespace Day1
 	{
-		int Part1(std::vector<int> data)
+		uint64_t Part1(std::vector<int> &data)
 		{
 			int previous{};
 			int current{};
@@ -32,7 +32,7 @@ namespace aoc
 			return increasedMeasurements;
 		}
 
-		int Part2(std::vector<int> data)
+		uint64_t Part2(std::vector<int> &data)
 		{
 			return 0;
 		}

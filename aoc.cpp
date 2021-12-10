@@ -12,6 +12,7 @@
 #include "solutions/Day6.cpp"
 #include "solutions/Day7.cpp"
 #include "solutions/Day8.cpp"
+#include "solutions/Day9.cpp"
 
 const std::string dir{"input/"};
 
@@ -88,6 +89,13 @@ void Day8(std::vector<std::string> data)
 
 	print(__func__, result1, elapsed1, result2, elapsed2);
 }
+void Day9(std::vector<std::string> data)
+{
+	auto [result1, elapsed1] = SolutionRunner(aoc::Day9::Part1, data);
+	auto [result2, elapsed2] = SolutionRunner(aoc::Day9::Part2, data);
+
+	print(__func__, result1, elapsed1, result2, elapsed2);
+}
 
 int main(int argc, char **argv)
 {
@@ -98,5 +106,6 @@ int main(int argc, char **argv)
 	Day5(Input::GetData<std::string>(dir + "05Input.txt", '\n'));
 	Day6(Input::GetNumberData<int>(dir + "06Input.txt", ','));
 	Day7(Input::GetNumberData<int>(dir + "07Test.txt", ',')); // keep as test to speed up execution
-	Day8(Input::GetData<std::string>(dir + "08Test.txt", '\n'));
+	Day8(Input::GetData<std::string>(dir + "08Input.txt", '\n'));
+	Day9(Input::GetData<std::string>(dir + "09Input.txt", '\n'));
 }

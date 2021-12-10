@@ -10,7 +10,7 @@ namespace aoc
 {
 	namespace Day2
 	{
-		uint64_t Part1(std::vector<std::string> data)
+		uint64_t Part1(std::vector<std::string> &data)
 		{
 			uint64_t horizontalPos{}, depth{};
 
@@ -32,7 +32,7 @@ namespace aoc
 			return horizontalPos * depth;
 		}
 
-		uint64_t Part2(std::vector<std::string> data)
+		uint64_t Part2(std::vector<std::string> &data)
 		{
 			uint64_t horizontalPos{}, depth{}, aim{};
 
