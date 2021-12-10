@@ -97,6 +97,6 @@ int main(int argc, char **argv)
 	Day4(Input::GetData<std::string>(dir + "04Test.txt", '\n'));
 	Day5(Input::GetData<std::string>(dir + "05Input.txt", '\n'));
 	Day6(Input::GetNumberData<int>(dir + "06Input.txt", ','));
-	Day7(Input::GetNumberData<int>(dir + "07Input.txt", ','));
+	Day7(Input::GetNumberData<int>(dir + "07Test.txt", ',')); // keep as test to speed up execution
 	Day8(Input::GetData<std::string>(dir + "08Test.txt", '\n'));
 }

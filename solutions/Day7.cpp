@@ -54,7 +54,6 @@ namespace aoc
 		{
 			std::sort(data.begin(), data.end());
 
-			uint64_t lastCrab{LLONG_MAX};	//store last crab checked to avoid running on duplicates. init to LLONG_MAX to avoid missing first crab
 			uint64_t lowestFuel{LLONG_MAX}; // store lowest fuel value, initialized to highest possible value
 
 			for (uint64_t i = 0; i < data.back(); i++)
